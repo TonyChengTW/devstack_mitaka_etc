@@ -1,0 +1,4 @@
+stack ALL=(root) NOPASSWD:ALL
+Defaults:stack secure_path=/sbin:/usr/sbin:/usr/bin:/bin:/usr/local/sbin:/usr/local/bin
+Defaults:stack !requiretty
+Defaults env_keep += PS4

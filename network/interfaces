@@ -1,0 +1,25 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+pre-up /sbin/ifconfig eth0 mtu 1400
+address 192.168.230.178
+netmask 255.255.255.0
+gateway 192.168.230.2
+dns-nameserver 168.95.1.1 8.8.8.8
+up ip link set $IFACE promisc off
+down ip link set $IFACE promisc off
+
+auto eth1
+iface eth1 inet static
+address 30.30.30.178
+netmask 255.255.255.0
+up ip link set $IFACE promisc on
+down ip link set $IFACE promisc off
+
+#auto eth2
+#iface eth2 inet dhcp
+#up ip link set $IFACE promisc on
+#down ip link set $IFACE promisc off

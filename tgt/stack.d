@@ -1,0 +1,1 @@
+/opt/stack/data/cinder/volumes
