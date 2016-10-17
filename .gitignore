@@ -2,3 +2,7 @@ apparmor.d/
 brltty/
 NetworkManager/
 etc/
+cups/
+elasticsearch/
+lvm/
+ssl/
